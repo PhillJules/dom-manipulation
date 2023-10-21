@@ -34,3 +34,24 @@ const para2 = document.createElement('p');
 
 para2.textContent = "ME TOO!";
 pinkBackground.appendChild(para2);
+
+function alertFunction(){
+  alert("We're Doing Big Tings!")
+}
+
+
+const btn = document.querySelector('#btn');
+btn.onclick = alertFunction;
+
+const lastBtn = document.querySelector("#btn2");
+lastBtn.addEventListener('click', function(e) {
+  e.target.style.background = 'blue';
+});
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    alert(button.id);
+  })
+})
